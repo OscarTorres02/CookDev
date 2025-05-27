@@ -3,17 +3,6 @@ import React, { useState, useEffect } from 'react';
 // ✅ Correcto
 import axios from 'axios';
 
-try {
-  // alguna llamada axios
-} catch (error) {
-  if (axios.isAxiosError(error)) {
-    console.log('Error de Axios:', error.response?.data);
-  } else {
-    console.log('Otro tipo de error:', error);
-  }
-}
-
-
 import {
   Form,
   Input,
@@ -26,10 +15,6 @@ import {
 //import { ZodError } from 'zod';
 //import { registerSchema } from '../../../assets/lib/zod/register';
 //import axios from 'axios';
-
-if (axios.isAxiosError(error)) {
-  // Manejar el error de axios
-}
 
 import './LoginScreen.css';
 
