@@ -1,6 +1,18 @@
 // src/components/screens/loginScreen/RegisterForm.tsx
 import React, { useState, useEffect } from 'react';
-//import axios, { isAxiosError } from 'axios';
+// ✅ Correcto
+import axios from 'axios';
+
+try {
+  // alguna llamada axios
+} catch (error) {
+  if (axios.isAxiosError(error)) {
+    console.log('Error de Axios:', error.response?.data);
+  } else {
+    console.log('Otro tipo de error:', error);
+  }
+}
+
 
 import {
   Form,
@@ -13,7 +25,12 @@ import {
 } from 'antd';
 //import { ZodError } from 'zod';
 //import { registerSchema } from '../../../assets/lib/zod/register';
-import axios from 'axios';
+//import axios from 'axios';
+
+if (axios.isAxiosError(error)) {
+  // Manejar el error de axios
+}
+
 import './LoginScreen.css';
 
 const { Option } = Select;
